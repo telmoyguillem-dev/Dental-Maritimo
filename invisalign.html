@@ -3,771 +3,778 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invisalign en Valencia — Sin Brackets — Clínica Dental Marítimo</title>
-<meta name="description" content="Ortodoncia invisible con Invisalign en Valencia. Sin brackets, sin rozaduras, sin que nadie lo note. Primera valoración gratuita en Clínica Dental Marítimo. 697 462 206.">
+<title>Invisalign Valencia — Clínica Dental Marítimo</title>
+<meta name="description" content="Ortodoncia invisible con Invisalign en Valencia. Sin brackets, sin rozaduras, sin que nadie lo note. Primera valoración gratuita. 697 462 206.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* ── LANDING-ONLY overrides ── */
-body{background:var(--cream);}
+/* ─── LANDING OVERRIDES (no nav, no footer distraction) ─── */
+body { background: #fff; }
 
-/* Sticky top bar */
-.ld-bar{position:sticky;top:0;z-index:200;background:var(--deep);display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);height:52px;gap:16px;}
-.ld-bar-l{font-size:13px;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:8px;}
-.ld-bar-l svg{width:13px;height:13px;flex-shrink:0;color:var(--mint);}
-.ld-bar-r{display:flex;align-items:center;gap:10px;}
-.ld-bar-r a.phone{font-size:13px;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;}
-.ld-bar-r a.phone:hover{color:#fff;}
-@media(max-width:640px){.ld-bar-l{display:none;}}
+/* ─── TOP LOGO BAR ─── */
+.ld-logobar {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad);
+  height: 68px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.ld-logobar img { height: 30px; width: auto; }
+.ld-logobar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ld-phone {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ld-phone svg { width: 14px; height: 14px; color: var(--mint); flex-shrink: 0; }
+@media(max-width:600px){ .ld-phone { display:none; } }
 
-/* Logo bar */
-.ld-logo-bar{background:var(--cream);border-bottom:1px solid var(--line);padding:0 var(--pad);height:64px;display:flex;align-items:center;justify-content:space-between;}
-.ld-logo-bar img{height:28px;width:auto;}
-.ld-logo-bar p{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px;}
-.ld-logo-bar p svg{width:13px;height:13px;color:var(--mint);}
+/* ─── HERO ─── */
+.ld-hero {
+  background: var(--deep);
+  color: #fff;
+  padding: clamp(64px,9vh,110px) var(--pad);
+  text-align: center;
+}
+.ld-hero-in { max-width: 760px; margin: 0 auto; }
+.ld-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5.5vw, 62px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  margin-bottom: 20px;
+  font-optical-sizing: auto;
+}
+.ld-hero h1 em { font-style: italic; color: var(--mint-soft); }
+.ld-hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,.72);
+  line-height: 1.65;
+  max-width: 52ch;
+  margin: 0 auto 36px;
+}
+.ld-hero-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.ld-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+}
+.ld-badge::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--mint);
+  flex-shrink: 0;
+}
 
-/* ── HERO ── */
-.ld-hero{background:var(--deep);color:#fff;padding:clamp(60px,8vh,96px) var(--pad);}
-.ld-hero-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center;}
-.ld-hero .lbl{color:var(--mint-soft);}
-.ld-hero h1{font-family:var(--serif);font-size:clamp(36px,4.8vw,60px);font-weight:300;line-height:1.08;letter-spacing:-.025em;margin-bottom:18px;font-optical-sizing:auto;}
-.ld-hero h1 em{font-style:italic;color:var(--mint-soft);}
-.ld-hero-sub{font-size:17px;color:rgba(255,255,255,.72);line-height:1.65;max-width:44ch;margin-bottom:32px;}
-.ld-hero-proof{display:flex;gap:28px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);}
-.ld-proof-item strong{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--mint-soft);display:block;line-height:1;}
-.ld-proof-item span{font-size:12px;color:rgba(255,255,255,.55);margin-top:3px;display:block;}
+/* ─── PROPUESTA DE VALOR ─── */
+.ld-prop {
+  background: var(--cream);
+  padding: clamp(60px,8vh,96px) var(--pad);
+  text-align: center;
+}
+.ld-prop-in { max-width: 680px; margin: 0 auto; }
+.ld-prop h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px,3vw,36px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -.015em;
+  font-optical-sizing: auto;
+}
+.ld-prop p { font-size: 17px; color: var(--muted); line-height: 1.7; }
 
-/* Form box */
-.ld-form-box{background:var(--cream);border-radius:var(--r);padding:32px;}
-.ld-form-box h3{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);margin-bottom:4px;}
-.ld-form-box p{font-size:13px;color:var(--muted);margin-bottom:22px;}
-.ld-form-box .fi-row{margin-bottom:10px;}
-.ld-form-box input,.ld-form-box select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font-family:var(--sans);font-size:15px;color:var(--ink);outline:none;transition:border-color .2s;}
-.ld-form-box input:focus,.ld-form-box select:focus{border-color:var(--cta);}
-.ld-form-box select{color:var(--muted);}
-.ld-form-box .legal{font-size:11px;color:var(--muted2);margin-top:10px;text-align:center;line-height:1.5;}
-.ld-form-box .btn{width:100%;justify-content:center;font-size:16px;padding:14px 24px;}
+/* ─── 4 CARACTERÍSTICAS ─── */
+.ld-feats {
+  background: var(--cream-paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(56px,7vh,88px) var(--pad);
+}
+.ld-feats-in {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 32px;
+}
+.ld-feat { display: flex; flex-direction: column; gap: 14px; }
+.ld-feat-ico {
+  width: 48px; height: 48px;
+  background: var(--mint-pale);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.ld-feat-ico svg { width: 22px; height: 22px; color: var(--deep); }
+.ld-feat h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.ld-feat p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+@media(max-width:900px){ .ld-feats-in { grid-template-columns: 1fr 1fr; gap:28px; } }
+@media(max-width:480px){ .ld-feats-in { grid-template-columns: 1fr; } }
 
-/* ── TRUST BAR ── */
-.ld-trust{background:var(--cream-paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px var(--pad);}
-.ld-trust-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center;}
-.ld-ti{display:flex;align-items:center;gap:12px;}
-.ld-ti-ico{width:40px;height:40px;background:var(--mint-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.ld-ti-ico svg{width:18px;height:18px;color:var(--deep);}
-.ld-ti-num{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--deep);line-height:1;}
-.ld-ti-lbl{font-size:12px;color:var(--muted2);margin-top:2px;}
-@media(max-width:768px){.ld-trust-in{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.ld-trust-in{grid-template-columns:1fr;}}
+/* ─── RESULTADOS REALES ─── */
+.ld-resultados {
+  background: var(--ink);
+  color: #fff;
+  padding: clamp(60px,8vh,100px) var(--pad);
+  text-align: center;
+}
+.ld-resultados-in { max-width: 1100px; margin: 0 auto; }
+.ld-resultados > div > span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--mint);
+  display: block;
+  margin-bottom: 10px;
+}
+.ld-resultados h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px,3.5vw,42px);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 32px;
+  letter-spacing: -.015em;
+  font-optical-sizing: auto;
+}
 
-/* ── SECCIÓN GENÉRICA ── */
-.ld-sec{padding:clamp(72px,9vh,112px) var(--pad);}
-.ld-in{max-width:1100px;margin:0 auto;}
-.ld-hd{margin-bottom:48px;}
-.ld-hd.center{text-align:center;}
-.ld-hd.center .sub{margin:0 auto;}
+/* Video placeholder */
+.vid-ph {
+  background: var(--deep);
+  border-radius: var(--r);
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto 36px;
+  max-width: 860px;
+  border: 1px solid rgba(255,255,255,.08);
+  cursor: pointer;
+  transition: background .2s;
+}
+.vid-ph:hover { background: #2a4a46; }
+.vid-ph-play {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  border: 2px solid rgba(255,255,255,.25);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.vid-ph:hover .vid-ph-play { background: rgba(255,255,255,.2); }
+.vid-ph-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
+.vid-ph span { font-size: 13px; color: rgba(255,255,255,.35); font-style: italic; }
 
-/* ── VIDEO PLACEHOLDER ── */
-.vid-wrap{border-radius:var(--r);overflow:hidden;background:var(--deep-ink);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;}
-.vid-wrap .play-btn{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;transition:background .2s;}
-.vid-wrap:hover .play-btn{background:rgba(255,255,255,.25);}
-.vid-wrap .play-btn svg{width:28px;height:28px;fill:#fff;margin-left:4px;}
-.vid-wrap .vid-label{position:absolute;bottom:16px;left:16px;font-size:12px;color:rgba(255,255,255,.45);font-style:italic;}
+/* ─── BENEFICIOS ─── */
+.ld-bens {
+  background: var(--cream);
+  padding: clamp(60px,8vh,100px) var(--pad);
+}
+.ld-bens-in { max-width: 1100px; margin: 0 auto; }
+.ld-bens-hd { margin-bottom: 48px; }
+.ld-bens-hd .lbl { color: var(--mint); }
+.ld-bens-hd h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px,3.5vw,42px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+  font-optical-sizing: auto;
+}
+.ld-bens-hd p { font-size: 17px; color: var(--muted); max-width: 50ch; }
+.ld-bens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.ld-ben {
+  background: var(--cream-paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 28px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.ld-ben-ico {
+  width: 48px; height: 48px;
+  background: var(--mint-pale);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ld-ben-ico svg { width: 22px; height: 22px; color: var(--deep); }
+.ld-ben h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.ld-ben p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+/* 5.º beneficio ocupa full width */
+.ld-ben:last-child { grid-column: 1 / -1; }
+@media(max-width:640px){ .ld-bens-grid { grid-template-columns: 1fr; } .ld-ben:last-child { grid-column: auto; } }
 
-/* ── SPLIT 2 COL ── */
-.ld-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.ld-split.rev{direction:rtl;}
-.ld-split.rev>*{direction:ltr;}
-@media(max-width:860px){.ld-split,.ld-split.rev{grid-template-columns:1fr;direction:ltr;}}
+/* ─── TESTIMONIOS ─── */
+.ld-testis {
+  background: var(--cream-paper);
+  border-top: 1px solid var(--line);
+  padding: clamp(60px,8vh,100px) var(--pad);
+}
+.ld-testis-in {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.ld-testis-left h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px,3.5vw,40px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+  font-optical-sizing: auto;
+}
+.ld-testis-left .lbl { color: var(--mint); margin-bottom: 6px; }
+.ld-testi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--mint-pale);
+  border: 1px solid var(--mint-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--deep);
+  margin-bottom: 28px;
+}
+.ld-testi-badge::before {
+  content:'';
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--mint);
+}
+.ld-check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.ld-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.ld-check-list li::before {
+  content: '✓';
+  color: var(--cta);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ld-testis-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ld-testi-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 28px;
+}
+.ld-stars { color: #f4a428; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.ld-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.ld-quote::before { content: '\201C'; color: var(--mint); font-size: 28px; line-height: 0; vertical-align: -8px; margin-right: 2px; }
+.ld-testi-meta { display: flex; align-items: center; gap: 12px; }
+.ld-testi-av {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--mint-pale);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--deep);
+  flex-shrink: 0;
+}
+.ld-testi-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+.ld-testi-info { font-size: 12px; color: var(--muted2); }
+@media(max-width:768px){ .ld-testis-in { grid-template-columns: 1fr; gap: 40px; } }
 
-/* ── PAIN CARDS ── */
-.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.pain-card{background:var(--cream-paper);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;gap:14px;}
-.pain-ico{width:46px;height:46px;background:var(--mint-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;}
-.pain-ico svg{width:22px;height:22px;color:var(--deep);}
-.pain-card h3{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--ink);line-height:1.25;}
-.pain-card p{font-size:14px;color:var(--muted);line-height:1.6;}
-.pain-cta{background:var(--deep);border-radius:var(--r);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:8px;}
-.pain-cta p{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.8vw,21px);color:var(--cream);line-height:1.4;font-weight:300;max-width:52ch;}
-@media(max-width:768px){.pain-grid{grid-template-columns:1fr;}.pain-cta{flex-direction:column;}}
+/* ─── FOOTER / CONTACTO ─── */
+.ld-footer-cta {
+  background: var(--deep);
+  color: #fff;
+  padding: clamp(60px,8vh,100px) var(--pad);
+  text-align: center;
+}
+.ld-footer-cta-in { max-width: 640px; margin: 0 auto; }
+.ld-clinic-name {
+  font-family: var(--serif);
+  font-size: clamp(22px,3vw,34px);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 8px;
+  font-optical-sizing: auto;
+  letter-spacing: -.01em;
+}
+.ld-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 8px;
+}
+.ld-rating strong { color: #f4a428; }
+.ld-address {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 36px;
+}
+.ld-footer-cta .btn { font-size: 16px; padding: 16px 36px; }
 
-/* ── VS GRID ── */
-.vs-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;}
-.vs-card{border-radius:var(--r);padding:28px 24px;}
-.vs-card.no{background:var(--cream-paper);border:1px solid var(--line);}
-.vs-card.si{background:var(--deep);color:#fff;}
-.vs-card h4{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:18px;}
-.vs-card.no h4{color:var(--muted);}
-.vs-card.si h4{color:var(--mint-soft);}
-.vs-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.vs-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5;}
-.vs-card.no .vs-list li{color:var(--muted);}
-.vs-card.si .vs-list li{color:rgba(255,255,255,.82);}
-.vs-dot{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;}
-.vs-card.no .vs-dot{background:var(--sand);color:var(--muted);}
-.vs-card.si .vs-dot{background:var(--mint);color:var(--deep);}
-@media(max-width:600px){.vs-wrap{grid-template-columns:1fr;}}
+/* ─── FOOTER MINI ─── */
+.ld-mini-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.35);
+  padding: 18px var(--pad);
+  text-align: center;
+  font-size: 12px;
+}
+.ld-mini-footer a { color: rgba(255,255,255,.4); }
 
-/* ── BENEFIT CARDS (4 col) ── */
-.ben4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.ben-c{display:flex;flex-direction:column;gap:12px;}
-.ben-c .ben-ico{width:52px;height:52px;background:var(--mint-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;}
-.ben-c .ben-ico svg{width:26px;height:26px;color:var(--deep);}
-.ben-c h3{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--ink);line-height:1.3;}
-.ben-c p{font-size:14px;color:var(--muted);line-height:1.6;}
-@media(max-width:900px){.ben4{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:480px){.ben4{grid-template-columns:1fr;}}
-
-/* ── TESTIMONIALS ── */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
-.testi-c{background:var(--cream-paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;}
-.testi-stars{color:#f4a428;font-size:14px;letter-spacing:1px;margin-bottom:12px;}
-.testi-q{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink);line-height:1.55;margin-bottom:18px;}
-.testi-author{display:flex;align-items:center;gap:12px;}
-.testi-av{width:38px;height:38px;border-radius:50%;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;color:var(--deep);flex-shrink:0;}
-.testi-name{font-size:14px;font-weight:600;color:var(--ink);}
-.testi-info{font-size:12px;color:var(--muted2);}
-@media(max-width:768px){.testi-grid{grid-template-columns:1fr;}}
-
-/* ── CASOS (before/after descriptions) ── */
-.casos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
-.caso-c{border-radius:var(--r);overflow:hidden;background:var(--cream-paper);border:1px solid var(--line);}
-.caso-head{background:var(--deep);padding:14px 20px;}
-.caso-head p{font-size:13px;color:var(--mint-soft);font-weight:500;}
-.caso-body{padding:22px;}
-.caso-body p{font-size:14px;color:var(--muted);line-height:1.6;}
-.caso-tag{margin-top:14px;padding:10px 14px;background:var(--mint-pale);border-radius:8px;font-size:12px;font-weight:600;color:var(--deep);}
-@media(max-width:768px){.casos-grid{grid-template-columns:1fr;}}
-
-/* ── STEPS ── */
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
-.step-c{text-align:center;padding:28px 20px;background:var(--cream-paper);border:1px solid var(--line);border-radius:var(--r);}
-.step-n{width:48px;height:48px;border-radius:50%;background:var(--deep);color:#fff;font-family:var(--serif);font-size:20px;font-weight:400;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
-.step-c h4{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--ink);margin-bottom:8px;}
-.step-c p{font-size:14px;color:var(--muted);line-height:1.6;}
-@media(max-width:860px){.steps-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.steps-grid{grid-template-columns:1fr;}}
-
-/* ── AUTHORITY ── */
-.aut-wrap{background:var(--deep);border-radius:var(--r);padding:clamp(40px,5vw,60px);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.aut-wrap .lbl{color:var(--mint-soft);}
-.aut-wrap .ttl{color:#fff;}
-.aut-wrap .sub{color:rgba(255,255,255,.65);}
-.aut-items{display:flex;flex-direction:column;gap:20px;margin-top:32px;}
-.aut-item{display:flex;gap:14px;align-items:flex-start;}
-.aut-item .ico{width:42px;height:42px;background:rgba(112,192,176,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.aut-item .ico svg{width:20px;height:20px;color:var(--mint);}
-.aut-item h4{font-size:14px;font-weight:600;color:rgba(255,255,255,.9);margin-bottom:3px;}
-.aut-item p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.5;}
-.aut-nums{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.aut-num{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px;text-align:center;}
-.aut-num strong{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--mint-soft);display:block;line-height:1;}
-.aut-num span{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;display:block;}
-@media(max-width:768px){.aut-wrap{grid-template-columns:1fr;}.aut-nums{grid-template-columns:1fr 1fr;}}
-
-/* ── OBJECIONES ── */
-.obj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.obj-c{background:var(--cream-paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;}
-.obj-c h4{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--ink);margin-bottom:10px;display:flex;align-items:flex-start;gap:10px;}
-.obj-c h4::before{content:"?";width:26px;height:26px;border-radius:50%;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--deep);flex-shrink:0;margin-top:1px;}
-.obj-c p{font-size:14px;color:var(--muted);line-height:1.65;padding-left:36px;}
-.obj-c p strong{color:var(--ink);}
-@media(max-width:640px){.obj-grid{grid-template-columns:1fr;}}
-
-/* ── CTA FORM SECTION ── */
-.ld-cta-sec{background:var(--deep);padding:clamp(72px,9vh,112px) var(--pad);}
-.ld-cta-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center;}
-.ld-cta-sec .lbl{color:var(--mint-soft);}
-.ld-cta-sec .ttl{color:#fff;}
-.ld-cta-sec .sub{color:rgba(255,255,255,.65);}
-.ld-cta-items{display:flex;flex-direction:column;gap:14px;margin-top:32px;}
-.ld-cta-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:rgba(255,255,255,.75);}
-.ld-cta-item::before{content:'✓';color:var(--mint);font-weight:700;flex-shrink:0;margin-top:2px;}
-.ld-cta-form{background:var(--cream);border-radius:var(--r);padding:32px;}
-.ld-cta-form h3{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink);margin-bottom:4px;}
-.ld-cta-form .note{font-size:13px;color:var(--muted);margin-bottom:20px;}
-.ld-cta-form input,.ld-cta-form select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--cream-paper);font-family:var(--sans);font-size:15px;color:var(--ink);outline:none;margin-bottom:10px;transition:border-color .2s;}
-.ld-cta-form input:focus,.ld-cta-form select:focus{border-color:var(--cta);}
-.ld-cta-form .btn{width:100%;justify-content:center;font-size:16px;padding:15px;}
-.ld-cta-form .legal{font-size:11px;color:var(--muted2);margin-top:10px;text-align:center;}
-@media(max-width:860px){.ld-cta-in{grid-template-columns:1fr;}}
-
-/* ── FAQ ── */
-.faq-list{display:flex;flex-direction:column;gap:10px;max-width:760px;margin:44px auto 0;}
-.faq-item{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
-.faq-q{width:100%;background:var(--cream-paper);border:none;text-align:left;padding:18px 22px;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .15s;}
-.faq-q:hover{background:var(--cream-deep);}
-.faq-arr{font-size:18px;color:var(--cta);transition:transform .25s;flex-shrink:0;}
-.faq-a{display:none;padding:0 22px 18px;font-size:14px;color:var(--muted);line-height:1.7;background:var(--cream-paper);}
-.faq-item.open .faq-q{background:var(--mint-pale);color:var(--deep);}
-.faq-item.open .faq-arr{transform:rotate(45deg);}
-.faq-item.open .faq-a{display:block;}
-
-/* ── CIERRE ── */
-.ld-cierre{background:var(--ink);color:#fff;padding:clamp(72px,9vh,112px) var(--pad);text-align:center;}
-.ld-cierre h2{font-family:var(--serif);font-size:clamp(28px,4vw,50px);font-weight:300;line-height:1.12;letter-spacing:-.02em;max-width:660px;margin:0 auto 18px;}
-.ld-cierre h2 em{font-style:italic;color:var(--mint-soft);}
-.ld-cierre p{font-size:17px;color:rgba(255,255,255,.62);max-width:48ch;margin:0 auto 36px;line-height:1.65;}
-.ld-cierre .urgencia{display:inline-flex;align-items:center;gap:8px;background:rgba(112,192,176,.12);border:1px solid rgba(112,192,176,.25);color:var(--mint-soft);font-size:13px;padding:8px 18px;border-radius:999px;margin-top:24px;}
-
-/* ── FOOTER ── */
-.ld-footer{background:var(--deep);color:rgba(255,255,255,.5);padding:24px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;}
-.ld-footer strong{color:rgba(255,255,255,.85);}
-.ld-footer a{color:var(--mint-soft);}
-@media(max-width:600px){.ld-footer{flex-direction:column;text-align:center;}}
-
-/* WhatsApp FAB */
-.wab-fab{position:fixed;bottom:24px;right:24px;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pw 3s ease-in-out infinite;}
-.wab-fab svg{width:28px;height:28px;fill:#fff;}
-@keyframes pw{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.35)}50%{box-shadow:0 4px 32px rgba(37,211,102,.6),0 0 0 8px rgba(37,211,102,.07)}}
-
-/* Hero responsive */
-@media(max-width:860px){.ld-hero-in{grid-template-columns:1fr;}}
+/* ─── WhatsApp FAB ─── */
+.wab-fab {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 300;
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4);
+  animation: pw 3s ease-in-out infinite;
+}
+.wab-fab svg { width: 28px; height: 28px; fill: #fff; }
+@keyframes pw {
+  0%,100%{ box-shadow: 0 4px 20px rgba(37,211,102,.35); }
+  50%{ box-shadow: 0 4px 32px rgba(37,211,102,.6), 0 0 0 8px rgba(37,211,102,.07); }
+}
 </style>
 </head>
 <body>
 
-<!-- ══ TOP BAR ══ -->
-<div class="ld-bar">
-  <div class="ld-bar-l">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Proveedor oficial Invisalign · Valencia
-  </div>
-  <div class="ld-bar-r">
-    <a href="tel:+34697462206" class="phone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;color:var(--mint)"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.5.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+<!-- ════════════════════════════════════
+     LOGO BAR
+════════════════════════════════════ -->
+<header class="ld-logobar">
+  <img
+    src="brand/logos/negro sin fondo.png"
+    alt="Clínica Dental Marítimo"
+    onerror="this.style.display='none';document.getElementById('ld-logotxt').style.display='block'"
+  >
+  <span id="ld-logotxt" style="display:none;font-family:var(--serif);font-size:19px;color:var(--ink);">Clínica Dental Marítimo</span>
+
+  <div class="ld-logobar-right">
+    <a href="tel:+34697462206" class="ld-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.5.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
       697 462 206
     </a>
-    <a href="#form-hero" class="btn btn-p" style="font-size:13px;padding:8px 18px;">Valoración gratuita</a>
+    <a href="#cta" class="btn btn-p" style="font-size:13px;padding:9px 20px;">Valoración gratuita</a>
   </div>
-</div>
+</header>
 
-<!-- ══ LOGO BAR ══ -->
-<div class="ld-logo-bar">
-  <img src="brand/logos/negro sin fondo.png" alt="Clínica Dental Marítimo" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-  <span style="display:none;font-family:var(--serif);font-size:18px;color:var(--ink);">Clínica Dental Marítimo</span>
-  <p>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    Av. del Port, 67 · Valencia
-  </p>
-</div>
 
-<!-- ══════════════════════════════════════
+<!-- ════════════════════════════════════
      1. HERO
-══════════════════════════════════════ -->
+════════════════════════════════════ -->
 <section class="ld-hero">
-  <div class="ld-hero-in">
-    <div>
-      <span class="lbl">Ortodoncia invisible · Invisalign Valencia</span>
-      <h1>Corrige tu sonrisa<br>en meses.<br><em>Sin que nadie<br>lo note.</em></h1>
-      <p class="ld-hero-sub">Alineadores Invisalign personalizados en Clínica Dental Marítimo. Sin brackets, sin alambres, sin rozaduras. Tu sonrisa ideal con 20 años de experiencia detrás.</p>
-      <div class="ld-hero-proof">
-        <div class="ld-proof-item"><strong>20</strong><span>años de experiencia</span></div>
-        <div class="ld-proof-item"><strong>+2.000</strong><span>pacientes tratados</span></div>
-        <div class="ld-proof-item"><strong>4.9 ★</strong><span>valoración Google</span></div>
-      </div>
-    </div>
-
-    <div class="ld-form-box" id="form-hero">
-      <h3>Primera valoración gratuita</h3>
-      <p>Sin compromiso · Te llamamos en menos de 24h</p>
-      <form onsubmit="handleForm(event)">
-        <div class="fi-row"><input type="text" placeholder="Tu nombre" required></div>
-        <div class="fi-row"><input type="tel" placeholder="Tu teléfono" required></div>
-        <div class="fi-row">
-          <select>
-            <option value="">Horario preferido para llamarte</option>
-            <option>Mañana (9:00 – 13:30)</option>
-            <option>Tarde (16:00 – 20:30)</option>
-            <option>Cuando podáis</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-p" style="margin-top:4px;">Quiero mi valoración gratuita →</button>
-        <p class="legal">Tus datos no se comparten con terceros. Solo te contactaremos para tu cita.</p>
-      </form>
+  <div class="ld-hero-in fi">
+    <h1>
+      Corrige Tu Sonrisa <em>Sin Brackets,</em><br>
+      Sin Que Nadie Lo Note
+    </h1>
+    <p class="ld-hero-sub">
+      Resultados visibles desde los primeros meses, sin dolor,
+      con alineadores transparentes diseñados a medida para ti.
+    </p>
+    <div class="ld-hero-cta">
+      <a
+        href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita"
+        class="btn btn-p btn-lg"
+        target="_blank"
+        rel="noopener"
+      >
+        Reserva tu valoración gratuita
+      </a>
+      <div class="ld-badge">+2.000 pacientes tratados en Valencia</div>
     </div>
   </div>
 </section>
 
-<!-- ══ TRUST BAR ══ -->
-<div class="ld-trust">
-  <div class="ld-trust-in">
-    <div class="ld-ti">
-      <div class="ld-ti-ico">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <div><div class="ld-ti-num">Oficial</div><div class="ld-ti-lbl">Proveedor Invisalign</div></div>
-    </div>
-    <div class="ld-ti">
-      <div class="ld-ti-ico">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-      </div>
-      <div><div class="ld-ti-num">Mismo día</div><div class="ld-ti-lbl">Diagnóstico en la visita</div></div>
-    </div>
-    <div class="ld-ti">
-      <div class="ld-ti-ico">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-      </div>
-      <div><div class="ld-ti-num">Sin intereses</div><div class="ld-ti-lbl">Financiación disponible</div></div>
-    </div>
-    <div class="ld-ti">
-      <div class="ld-ti-ico">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.5.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      </div>
-      <div><div class="ld-ti-num">697 462 206</div><div class="ld-ti-lbl">Lun–Vie · 9–13:30 / 16–20:30</div></div>
-    </div>
-  </div>
-</div>
 
-<!-- ══════════════════════════════════════
-     2. PROBLEMA
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream);">
-  <div class="ld-in">
-    <div class="ld-hd fi">
-      <span class="lbl">El problema</span>
-      <h2 class="ttl">Llevas años pensando<br>en cambiar tu sonrisa.</h2>
-      <p class="sub">Y cada vez que lo piensas, aparece lo mismo: la imagen de ponerte brackets a tu edad, que se noten, que duelan, que tarden años. Así que lo vas posponiendo.</p>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-card fi d1">
-        <div class="pain-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
-        </div>
-        <h3>Te tapas la boca al reír</h3>
-        <p>En fotos, en reuniones, en citas. Siempre hay un momento en que eres consciente de tu sonrisa y te frenas.</p>
-      </div>
-      <div class="pain-card fi d2">
-        <div class="pain-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
-        </div>
-        <h3>Los brackets no son para ti</h3>
-        <p>Demasiado aparatosos. Demasiado visibles. A tu edad, en tu trabajo, con tu vida. No encajan.</p>
-      </div>
-      <div class="pain-card fi d3">
-        <div class="pain-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <h3>Crees que ya es tarde</h3>
-        <p>No lo es. Tratamos pacientes de 20 a 60 años. La ortodoncia invisible no tiene límite de edad.</p>
-      </div>
-    </div>
-    <div class="pain-cta fi">
-      <p>"Existe una forma de corregir tu sonrisa en meses, sin que nadie se dé cuenta, sin dolor, y sin cambiar tu rutina."</p>
-      <a href="#form-cta" class="btn btn-w btn-lg">Descubrir cómo →</a>
-    </div>
+<!-- ════════════════════════════════════
+     2. PROPUESTA DE VALOR
+════════════════════════════════════ -->
+<section class="ld-prop">
+  <div class="ld-prop-in fi">
+    <h2>Precisión y confianza en cada tratamiento</h2>
+    <p>
+      En Clínica Dental Marítimo llevamos más de 20 años ayudando a personas en Valencia
+      a conseguir la sonrisa que siempre quisieron. Nuestro protocolo de ortodoncia
+      invisible combina diagnóstico digital avanzado, planificación 3D y un seguimiento
+      personalizado de principio a fin — para que tú solo tengas que preocuparte
+      de sonreír.
+    </p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     3. SOLUCIÓN — VÍDEO
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream-paper);border-top:1px solid var(--line);">
-  <div class="ld-in">
-    <div class="ld-split">
-      <div class="fi">
-        <span class="lbl">La solución</span>
-        <h2 class="ttl">Invisalign: ortodoncia<br>sin que nadie<br><em>sepa que llevas ortodoncia.</em></h2>
-        <p class="sub">Alineadores de plástico transparente fabricados a medida que mueven tus dientes semana a semana. Se quitan para comer. No se ven. Y al terminar, tienes la sonrisa que siempre quisiste.</p>
-        <div class="vs-wrap">
-          <div class="vs-card no">
-            <h4>❌ Brackets</h4>
-            <ul class="vs-list">
-              <li><span class="vs-dot">✗</span>Se ven desde el primer día</li>
-              <li><span class="vs-dot">✗</span>Alambres que rozan y molestan</li>
-              <li><span class="vs-dot">✗</span>No puedes quitártelos</li>
-              <li><span class="vs-dot">✗</span>Restricciones de comida</li>
-            </ul>
-          </div>
-          <div class="vs-card si">
-            <h4>✅ Invisalign</h4>
-            <ul class="vs-list">
-              <li><span class="vs-dot">✓</span>Prácticamente invisibles</li>
-              <li><span class="vs-dot">✓</span>Sin alambres ni rozaduras</li>
-              <li><span class="vs-dot">✓</span>Los quitas para comer</li>
-              <li><span class="vs-dot">✓</span>Comes lo que quieras</li>
-            </ul>
-          </div>
-        </div>
+
+<!-- ════════════════════════════════════
+     3. CUATRO CARACTERÍSTICAS
+════════════════════════════════════ -->
+<section class="ld-feats">
+  <div class="ld-feats-in">
+
+    <div class="ld-feat fi d1">
+      <div class="ld-feat-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
       </div>
-      <div class="fi d2">
-        <!-- VIDEO PLACEHOLDER -->
-        <div class="vid-wrap" style="cursor:pointer;">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <span class="vid-label">Vídeo: cómo funciona Invisalign</span>
-        </div>
-      </div>
+      <h3>Diagnóstico gratuito y personalizado</h3>
+      <p>Primera valoración sin coste. Analizamos tu caso, te mostramos el resultado en 3D y te damos el presupuesto exacto sin compromisos.</p>
     </div>
+
+    <div class="ld-feat fi d2">
+      <div class="ld-feat-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h3>Invisible y sin comprometer tu imagen</h3>
+      <p>Los alineadores son prácticamente transparentes. Compañeros, amigos y familia no sabrán que estás en tratamiento.</p>
+    </div>
+
+    <div class="ld-feat fi d3">
+      <div class="ld-feat-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+        </svg>
+      </div>
+      <h3>Tecnología de escáner 3D</h3>
+      <p>Sin moldes incómodos. Escaneamos tu boca digitalmente y diseñamos tu sonrisa final antes de que empieces el tratamiento.</p>
+    </div>
+
+    <div class="ld-feat fi d4">
+      <div class="ld-feat-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+      </div>
+      <h3>Sin dolor ni visitas constantes</h3>
+      <p>Revisiones cómodas cada 6–8 semanas. Cambias los alineadores en casa. Sin alambres que rasguen ni brackets que ajustar.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     4. BENEFICIOS
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream);">
-  <div class="ld-in">
-    <div class="ld-hd fi">
-      <span class="lbl">Por qué Invisalign</span>
-      <h2 class="ttl">Cinco razones por las que<br>nuestros pacientes lo eligen</h2>
-    </div>
-    <div class="ben4">
-      <div class="ben-c fi d1">
-        <div class="ben-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h3>Invisible de verdad</h3>
-        <p>Nadie sabe que llevas ortodoncia a no ser que tú lo digas. Ni en el trabajo, ni en fotos.</p>
-      </div>
-      <div class="ben-c fi d2">
-        <div class="ben-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        </div>
-        <h3>Sin dolor ni molestias</h3>
-        <p>Solo una presión suave los primeros días de cada cambio. Sin alambres que rasguen.</p>
-      </div>
-      <div class="ben-c fi d3">
-        <div class="ben-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <h3>Resultados rápidos</h3>
-        <p>Muchos casos se resuelven en 6 a 12 meses. Cambios visibles en las primeras semanas.</p>
-      </div>
-      <div class="ben-c fi d4">
-        <div class="ben-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        </div>
-        <h3>100% personalizado</h3>
-        <p>Diseñamos tu sonrisa final en 3D antes de empezar. Ves el resultado antes de ponerte el primer alineador.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:44px;" class="fi">
-      <a href="#form-cta" class="btn btn-p btn-lg">Pedir valoración gratuita →</a>
-    </div>
-  </div>
-</section>
 
-<!-- ══════════════════════════════════════
-     5. RESULTADOS — VÍDEO + TESTIMONIOS
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream-paper);border-top:1px solid var(--line);">
-  <div class="ld-in">
-    <div class="ld-split fi">
-      <div>
-        <!-- VIDEO PLACEHOLDER -->
-        <div class="vid-wrap" style="cursor:pointer;">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <span class="vid-label">Vídeo: testimonio de paciente</span>
-        </div>
-      </div>
-      <div>
-        <span class="lbl">Resultados reales</span>
-        <h2 class="ttl">Personas reales.<br>Sonrisas reales.</h2>
-        <p class="sub">Casos tratados en nuestra clínica por la Dra. Sofía Chamorro a lo largo de 20 años de experiencia en ortodoncia invisible.</p>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--muted);">
-            <span style="color:var(--cta);font-weight:700;flex-shrink:0;margin-top:1px;">✓</span>
-            Apiñamiento dental corregido en 8 meses
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--muted);">
-            <span style="color:var(--cta);font-weight:700;flex-shrink:0;margin-top:1px;">✓</span>
-            Diastemas cerrados sin extracciones
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--muted);">
-            <span style="color:var(--cta);font-weight:700;flex-shrink:0;margin-top:1px;">✓</span>
-            Mordidas cruzadas resueltas en adultos mayores de 40
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--muted);">
-            <span style="color:var(--cta);font-weight:700;flex-shrink:0;margin-top:1px;">✓</span>
-            Tratamientos desde 5 meses en casos leves
-          </div>
-        </div>
-        <a href="#form-cta" class="btn btn-p btn-lg" style="margin-top:28px;">Saber si soy candidato →</a>
-      </div>
-    </div>
-
-    <div class="testi-grid" style="margin-top:64px;">
-      <div class="testi-c fi d1">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-q">"Empecé en febrero y en agosto ya había terminado. Mis compañeras no se dieron cuenta en ningún momento de que llevaba ortodoncia."</p>
-        <div class="testi-author">
-          <div class="testi-av">M</div>
-          <div>
-            <div class="testi-name">María G.</div>
-            <div class="testi-info">34 años · Tratamiento finalizado</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-c fi d2">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-q">"Llevaba años sin salir en fotos de grupo. A los 4 meses de empezar ya empezaba a sonreír sin pensar en ello. Para mí fue un cambio enorme."</p>
-        <div class="testi-author">
-          <div class="testi-av">C</div>
-          <div>
-            <div class="testi-name">Carlos M.</div>
-            <div class="testi-info">29 años · Tratamiento finalizado</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-c fi d3">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-q">"Pensaba que con 44 años era tarde. La Dra. Chamorro me dijo que no hay edad límite. Terminé en 10 meses. Ojalá lo hubiera hecho antes."</p>
-        <div class="testi-author">
-          <div class="testi-av">L</div>
-          <div>
-            <div class="testi-name">Laura P.</div>
-            <div class="testi-info">44 años · Tratamiento finalizado</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     6. PROCESO
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream);">
-  <div class="ld-in">
-    <div class="ld-hd center fi">
-      <span class="lbl">Cómo funciona</span>
-      <h2 class="ttl">De la primera visita<br>a tu sonrisa ideal en 4 pasos</h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step-c fi d1">
-        <div class="step-n">1</div>
-        <h4>Valoración gratuita</h4>
-        <p>Revisamos tu caso sin compromiso. Te decimos si eres candidato, cuánto duraría y el precio exacto.</p>
-      </div>
-      <div class="step-c fi d2">
-        <div class="step-n">2</div>
-        <h4>Escáner 3D</h4>
-        <p>Sin moldes incómodos. Escaneamos tu boca digitalmente y diseñamos tu sonrisa final antes de empezar.</p>
-      </div>
-      <div class="step-c fi d3">
-        <div class="step-n">3</div>
-        <h4>Tus alineadores</h4>
-        <p>Fabricados a medida. Los recibes en semanas y empiezas el tratamiento desde el primer día.</p>
-      </div>
-      <div class="step-c fi d4">
-        <div class="step-n">4</div>
-        <h4>Seguimiento</h4>
-        <p>Revisiones cada 6–8 semanas. Cambias alineadores en casa. Nosotros controlamos que todo avanza bien.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     7. AUTORIDAD
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream-paper);border-top:1px solid var(--line);">
-  <div class="ld-in">
-    <div class="aut-wrap fi">
-      <div>
-        <span class="lbl">Por qué Dental Marítimo</span>
-        <h2 class="ttl">20 años.<br><em>Más de 2.000 pacientes.<br>Una sola clínica.</em></h2>
-        <p class="sub">La clínica de referencia del barrio Marítimo de Valencia, con especialización en ortodoncia invisible y tecnología de diagnóstico de última generación.</p>
-        <div class="aut-items">
-          <div class="aut-item">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h4>Proveedor oficial Invisalign</h4>
-              <p>Materiales originales, protocolos certificados y garantía del fabricante en cada tratamiento.</p>
-            </div>
-          </div>
-          <div class="aut-item">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
-            </div>
-            <div>
-              <h4>Escáner 3D de última generación</h4>
-              <p>Sin moldes. Diagnóstico digital preciso y simulación de tu resultado final desde el primer día.</p>
-            </div>
-          </div>
-          <div class="aut-item">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div>
-              <h4>Dra. Sofía Chamorro</h4>
-              <p>Directora y especialista en ortodoncia. Más de 20 años tratando sonrisas en Valencia.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="aut-nums">
-        <div class="aut-num fi d1"><strong>20</strong><span>años de experiencia</span></div>
-        <div class="aut-num fi d2"><strong>+2.000</strong><span>pacientes tratados</span></div>
-        <div class="aut-num fi d3"><strong>4.9 ★</strong><span>en Google Maps</span></div>
-        <div class="aut-num fi d4"><strong>0€</strong><span>primera valoración</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     8. OBJECIONES
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream);">
-  <div class="ld-in">
-    <div class="ld-hd fi">
-      <span class="lbl">Resolvemos tus dudas</span>
-      <h2 class="ttl">Lo que nos preguntan<br>antes de empezar</h2>
-    </div>
-    <div class="obj-grid fi">
-      <div class="obj-c">
-        <h4>¿Es muy caro Invisalign?</h4>
-        <p>El precio depende de la complejidad del caso. Te lo decimos en la primera visita, que es <strong>completamente gratuita</strong>. Además, ofrecemos financiación sin intereses. Muchos pacientes pagan menos de 100€/mes.</p>
-      </div>
-      <div class="obj-c">
-        <h4>¿Cuánto tiempo dura el tratamiento?</h4>
-        <p>Los casos leves se resuelven en <strong>4–6 meses</strong>. Los moderados, en 8–12 meses. Los más complejos pueden llegar a 18 meses. En tu valoración sabrás exactamente cuánto es el tuyo.</p>
-      </div>
-      <div class="obj-c">
-        <h4>¿Duele llevar los alineadores?</h4>
-        <p>Los primeros 2–3 días de cada cambio notarás <strong>presión suave</strong>. Señal de que los dientes se mueven. Sin alambres ni brackets, no hay rozaduras ni heridas. Molestia mínima.</p>
-      </div>
-      <div class="obj-c">
-        <h4>¿Funciona igual que los brackets?</h4>
-        <p>Para la gran mayoría de casos, <strong>sí</strong>. Invisalign trata apiñamientos, diastemas, mordidas cruzadas y muchas otras maloclusiones. En tu valoración te confirmamos si tu caso es candidato.</p>
-      </div>
-      <div class="obj-c">
-        <h4>¿Cuántas horas al día se llevan?</h4>
-        <p>Lo ideal son <strong>20–22 horas diarias</strong>. Los quitas para comer, beber (salvo agua) y cepillarte. Si cumples con el uso, los resultados llegan según el plan.</p>
-      </div>
-      <div class="obj-c">
-        <h4>¿Hay límite de edad?</h4>
-        <p>No. Tratamos adultos desde los 18 años <strong>sin límite superior</strong>. Con 30, con 45, con 55. Solo se necesita que los dientes y las encías estén en buen estado general.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     9. CTA PRINCIPAL
-══════════════════════════════════════ -->
-<section class="ld-cta-sec" id="form-cta">
-  <div class="ld-cta-in">
+<!-- ════════════════════════════════════
+     4. RESULTADOS REALES (vídeo placeholder + CTA)
+════════════════════════════════════ -->
+<section class="ld-resultados">
+  <div class="ld-resultados-in">
     <div class="fi">
-      <span class="lbl">Primer paso</span>
-      <h2 class="ttl">Primera valoración<br><em>gratuita y sin compromiso.</em></h2>
-      <p class="sub">En una sola visita te decimos si eres candidato, cuánto duraría tu tratamiento y cuál sería el precio exacto. Sin presiones.</p>
-      <div class="ld-cta-items">
-        <div class="ld-cta-item">Diagnóstico completo en el mismo día</div>
-        <div class="ld-cta-item">Simulación 3D de tu sonrisa final</div>
-        <div class="ld-cta-item">Presupuesto detallado sin letra pequeña</div>
-        <div class="ld-cta-item">Financiación sin intereses disponible</div>
-      </div>
+      <span class="lbl">Resultados reales</span>
+      <h2>Casos reales tratados<br>en Clínica Dental Marítimo</h2>
     </div>
-    <div class="ld-cta-form fi d2">
-      <h3>Reserva tu valoración gratuita</h3>
-      <p class="note">Te llamamos en menos de 24 horas</p>
-      <form onsubmit="handleForm(event)">
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="tel" placeholder="Tu teléfono" required>
-        <select>
-          <option value="">Horario preferido</option>
-          <option>Mañana (9:00 – 13:30)</option>
-          <option>Tarde (16:00 – 20:30)</option>
-          <option>Cuando podáis</option>
-        </select>
-        <button type="submit" class="btn btn-p" style="margin-top:4px;">Quiero mi valoración gratuita →</button>
-      </form>
-      <p class="legal">Tus datos no se comparten con terceros · Solo te contactaremos para tu cita</p>
-      <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;">
-        <a href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita" class="btn btn-o" style="justify-content:center;" target="_blank">💬 Escribir por WhatsApp</a>
-        <a href="tel:+34697462206" class="btn btn-ghost" style="justify-content:center;background:var(--deep);border-color:var(--line);color:var(--muted);">📞 Llamar al 697 462 206</a>
+
+    <!-- VISUAL: vídeo de casos reales / antes-después -->
+    <div class="vid-ph fi d2">
+      <div class="vid-ph-play">
+        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
       </div>
+      <span>Próximamente: vídeo de resultados</span>
+    </div>
+
+    <a
+      href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita"
+      class="btn btn-p btn-lg fi d3"
+      target="_blank"
+      rel="noopener"
+    >
+      Reserva tu valoración gratuita
+    </a>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     5. BENEFICIOS
+════════════════════════════════════ -->
+<section class="ld-bens">
+  <div class="ld-bens-in">
+
+    <div class="ld-bens-hd fi">
+      <span class="lbl">Beneficios</span>
+      <h2>Consigue la sonrisa que siempre<br>quisiste, en tus condiciones</h2>
+      <p>Sin renunciar a tu comodidad, a tu imagen ni a tu rutina diaria.</p>
+    </div>
+
+    <div class="ld-bens-grid">
+
+      <div class="ld-ben fi d1">
+        <div class="ld-ben-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Tratamiento rápido y sin interrupciones</h3>
+          <p>Muchos casos se resuelven en 6 a 12 meses. Revisiones cortas que encajan con tu agenda, sin perder tiempo en la clínica.</p>
+        </div>
+      </div>
+
+      <div class="ld-ben fi d2">
+        <div class="ld-ben-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Cambios visibles desde el primer mes</h3>
+          <p>Empezarás a notar la diferencia en las primeras semanas. Tu sonrisa evoluciona de forma progresiva y natural.</p>
+        </div>
+      </div>
+
+      <div class="ld-ben fi d3">
+        <div class="ld-ben-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M8 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Higiene perfecta en todo momento</h3>
+          <p>Los alineadores se quitan para comer y cepillarte. Tus dientes y encías se cuidan igual que antes, sin complicaciones.</p>
+        </div>
+      </div>
+
+      <div class="ld-ben fi d4">
+        <div class="ld-ben-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Diseñado para tu sonrisa, no para la de otro</h3>
+          <p>Cada alineador se fabrica a medida sobre tu escáner 3D. Ves el resultado final antes de empezar y apruebas el plan.</p>
+        </div>
+      </div>
+
+      <div class="ld-ben fi">
+        <div class="ld-ben-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Tratamiento médico con respaldo de 20 años</h3>
+          <p>La Dra. Sofía Chamorro y su equipo llevan dos décadas tratando sonrisas en Valencia. Proveedor oficial Invisalign, protocolos certificados, garantía de fabricante.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     10. FAQ
-══════════════════════════════════════ -->
-<section class="ld-sec" style="background:var(--cream-paper);border-top:1px solid var(--line);">
-  <div class="ld-in">
-    <div class="ld-hd center fi">
-      <span class="lbl">Preguntas frecuentes</span>
-      <h2 class="ttl">Todo lo que necesitas saber<br>sobre Invisalign</h2>
+
+<!-- ════════════════════════════════════
+     6. TESTIMONIOS
+════════════════════════════════════ -->
+<section class="ld-testis">
+  <div class="ld-testis-in">
+
+    <!-- Columna izquierda: titular + checklist + CTA -->
+    <div class="ld-testis-left fi">
+      <span class="lbl">Testimonios</span>
+      <h2>Lo que dicen<br>nuestros pacientes</h2>
+      <div class="ld-testi-badge">Paciente de Clínica Dental Marítimo</div>
+      <ul class="ld-check-list">
+        <li>Cambios visibles en las primeras semanas de tratamiento</li>
+        <li>Explicación clara del proceso desde la primera visita</li>
+        <li>Alineadores cómodos, sin dolor ni rozaduras</li>
+        <li>Satisfacción total al ver el resultado final</li>
+      </ul>
+      <a
+        href="https://wa.me/34697462206?text=Hola,%20quiero%20pedir%20mi%20valoraci%C3%B3n%20gratuita%20de%20Invisalign"
+        class="btn btn-p btn-lg"
+        target="_blank"
+        rel="noopener"
+      >
+        Pide tu valoración — disponible ahora
+      </a>
     </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Cuántas horas al día tengo que llevar los alineadores? <span class="faq-arr">+</span></button>
-        <div class="faq-a">Se recomiendan entre 20 y 22 horas diarias. Los quitas para comer, beber (excepto agua fría) y cepillarte los dientes. Si cumples con el tiempo de uso, los resultados son exactamente los planificados en tu simulación 3D.</div>
+
+    <!-- Columna derecha: cards de testimonio -->
+    <div class="ld-testis-right fi d2">
+
+      <div class="ld-testi-card">
+        <div class="ld-stars">★★★★★</div>
+        <p class="ld-quote">
+          Empecé en febrero pensando que se notaría. En agosto terminé y mis
+          compañeras me preguntaron qué me había hecho — nadie supo que
+          había llevado ortodoncia en todo ese tiempo.
+        </p>
+        <div class="ld-testi-meta">
+          <div class="ld-testi-av">M</div>
+          <div>
+            <div class="ld-testi-name">María G.</div>
+            <div class="ld-testi-info">34 años · Tratamiento completado</div>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Puedo comer con los alineadores puestos? <span class="faq-arr">+</span></button>
-        <div class="faq-a">No. Los alineadores se retiran siempre para comer y beber (excepto agua). Esto es en realidad una ventaja: puedes comer absolutamente todo sin restricciones, y evitas que los alineadores se manchen o dañen.</div>
+
+      <div class="ld-testi-card">
+        <div class="ld-stars">★★★★★</div>
+        <p class="ld-quote">
+          Llevaba años sin salir en fotos de grupo. A los 4 meses de empezar
+          ya sonreía sin pensarlo. Parece una tontería, pero para mí lo fue todo.
+        </p>
+        <div class="ld-testi-meta">
+          <div class="ld-testi-av">C</div>
+          <div>
+            <div class="ld-testi-name">Carlos M.</div>
+            <div class="ld-testi-info">29 años · Tratamiento completado</div>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Cuándo voy a empezar a notar cambios? <span class="faq-arr">+</span></button>
-        <div class="faq-a">La mayoría de pacientes nota cambios visibles a partir de la 4ª o 6ª semana. El resultado final depende de la duración total de tu plan, que te mostraremos en 3D antes de empezar.</div>
+
+      <div class="ld-testi-card">
+        <div class="ld-stars">★★★★★</div>
+        <p class="ld-quote">
+          Pensaba que con 44 años era demasiado tarde. La doctora me explicó
+          que no hay límite de edad. Terminé en 10 meses. Ojalá lo hubiera
+          hecho antes.
+        </p>
+        <div class="ld-testi-meta">
+          <div class="ld-testi-av">L</div>
+          <div>
+            <div class="ld-testi-name">Laura P.</div>
+            <div class="ld-testi-info">44 años · Tratamiento completado</div>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Qué pasa si pierdo o rompo un alineador? <span class="faq-arr">+</span></button>
-        <div class="faq-a">Contáctanos cuanto antes. Dependiendo del momento, puedes pasar al siguiente alineador o fabricaremos uno de reemplazo. No es una situación grave, pero conviene actuar con rapidez para no perder progresión.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Necesito retenedor después del tratamiento? <span class="faq-arr">+</span></button>
-        <div class="faq-a">Sí, igual que con cualquier ortodoncia. Después de Invisalign se usa un retenedor nocturno para mantener los resultados a largo plazo. Es una parte fundamental del tratamiento que explicamos desde el inicio.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">¿Puedo hacerme Invisalign si tengo implantes o empastes? <span class="faq-arr">+</span></button>
-        <div class="faq-a">En la mayoría de casos, sí. Los implantes y empastes no son impedimento para Invisalign. Lo evaluamos en tu valoración gratuita para confirmarlo en tu caso concreto.</div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     11. CIERRE EMOCIONAL
-══════════════════════════════════════ -->
-<section class="ld-cierre">
-  <h2 class="fi">Tu sonrisa perfecta<br>está a pocos meses.<br><em>La única pregunta es cuándo empiezas.</em></h2>
-  <p class="fi d2">El primer paso es el más fácil: una valoración gratuita, sin compromiso, en menos de una hora. Descubre si eres candidato y cómo quedaría tu sonrisa antes de tomar ninguna decisión.</p>
-  <a href="#form-cta" class="btn btn-p btn-lg fi d3">Pedir valoración gratuita →</a>
-  <div class="urgencia fi d4">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-    Huecos disponibles esta semana · Sin coste · Sin compromiso
+
+<!-- ════════════════════════════════════
+     7. FOOTER / CTA FINAL
+════════════════════════════════════ -->
+<section class="ld-footer-cta" id="cta">
+  <div class="ld-footer-cta-in fi">
+
+    <p class="ld-clinic-name">Clínica Dental Marítimo Valencia</p>
+
+    <div class="ld-rating">
+      <strong>★★★★★</strong>
+      4.9 Estrellas en Google Maps
+    </div>
+
+    <p class="ld-address">Av. del Port, 67 · Valencia · Lun–Vie 9:00–20:30</p>
+
+    <a
+      href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita"
+      class="btn btn-w btn-lg"
+      target="_blank"
+      rel="noopener"
+    >
+      Reserva tu valoración gratuita
+    </a>
+
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="ld-footer">
-  <div><strong>Clínica Dental Marítimo</strong> · Av. del Port, 67, Valencia</div>
-  <div>
-    <a href="tel:+34697462206">697 462 206</a> ·
-    Lun–Vie 9:00–13:30 / 16:00–20:30
-  </div>
-  <div style="font-size:11px;opacity:.5;">© 2025 Clínica Dental Marítimo · <a href="#">Privacidad</a></div>
-</footer>
+<!-- Mini footer -->
+<div class="ld-mini-footer">
+  © 2025 Clínica Dental Marítimo ·
+  <a href="#">Política de privacidad</a> ·
+  <a href="tel:+34697462206">697 462 206</a>
+</div>
 
 <!-- WhatsApp FAB -->
-<a class="wab-fab" href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a
+  class="wab-fab"
+  href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign"
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  <svg viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
 </a>
 
 <script src="shared.js"></script>
-<script>
-function toggleFaq(btn){
-  const item=btn.closest('.faq-item');
-  const open=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  if(!open)item.classList.add('open');
-}
-function handleForm(e){
-  e.preventDefault();
-  const btn=e.target.querySelector('button[type=submit]');
-  btn.textContent='✓ Solicitud enviada — te llamamos pronto';
-  btn.style.background='var(--deep)';
-  btn.disabled=true;
-}
-</script>
 </body>
 </html>
