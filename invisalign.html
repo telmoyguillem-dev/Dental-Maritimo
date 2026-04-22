@@ -43,40 +43,47 @@ body { background: #fff; }
 
 /* ─── HERO ─── */
 .ld-hero {
-  background: var(--deep);
-  color: #fff;
-  padding: clamp(64px,9vh,110px) var(--pad);
-  text-align: center;
+  background: var(--cream);
+  padding: clamp(56px,8vh,100px) var(--pad);
 }
-.ld-hero-in { max-width: 760px; margin: 0 auto; }
+.ld-hero-in {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  align-items: center;
+}
+.ld-hero-copy { display: flex; flex-direction: column; gap: 0; }
 .ld-hero h1 {
   font-family: var(--serif);
-  font-size: clamp(34px, 5.5vw, 62px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -.025em;
+  line-height: 1.06;
+  letter-spacing: -.028em;
+  color: var(--ink);
   margin-bottom: 20px;
   font-optical-sizing: auto;
 }
-.ld-hero h1 em { font-style: italic; color: var(--mint-soft); }
+.ld-hero h1 em { font-style: italic; color: var(--cta); }
 .ld-hero-sub {
   font-size: 18px;
-  color: rgba(255,255,255,.72);
+  color: var(--muted);
   line-height: 1.65;
-  max-width: 52ch;
-  margin: 0 auto 36px;
+  max-width: 46ch;
+  margin-bottom: 36px;
 }
-.ld-hero-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.ld-hero-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .ld-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
+  background: var(--cream-paper);
+  border: 1px solid var(--line);
   padding: 8px 18px;
   border-radius: 999px;
   font-size: 13px;
-  color: rgba(255,255,255,.65);
+  color: var(--muted);
 }
 .ld-badge::before {
   content: '';
@@ -84,6 +91,43 @@ body { background: #fff; }
   border-radius: 50%;
   background: var(--mint);
   flex-shrink: 0;
+}
+
+/* Vídeo vertical */
+.ld-hero-vid {
+  width: 100%;
+  aspect-ratio: 9/16;
+  background: var(--deep-ink);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity .2s;
+  border: 1px solid var(--line);
+}
+.ld-hero-vid:hover { opacity: .92; }
+.ld-hero-vid .play-btn {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  border: 2px solid rgba(255,255,255,.28);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.ld-hero-vid:hover .play-btn { background: rgba(255,255,255,.22); }
+.ld-hero-vid .play-btn svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
+.ld-hero-vid span { font-size: 12px; color: rgba(255,255,255,.3); font-style: italic; }
+
+@media(max-width:860px){
+  .ld-hero-in { grid-template-columns: 1fr; }
+  .ld-hero-vid { aspect-ratio: 9/16; max-width: 320px; margin: 0 auto; }
+  .ld-hero-cta { align-items: center; }
+  .ld-hero h1 { text-align: center; }
+  .ld-hero-sub { text-align: center; margin-left: auto; margin-right: auto; }
 }
 
 /* ─── PROPUESTA DE VALOR ─── */
@@ -441,26 +485,40 @@ body { background: #fff; }
      1. HERO
 ════════════════════════════════════ -->
 <section class="ld-hero">
-  <div class="ld-hero-in fi">
-    <h1>
-      Corrige Tu Sonrisa <em>Sin Brackets,</em><br>
-      Sin Que Nadie Lo Note
-    </h1>
-    <p class="ld-hero-sub">
-      Resultados visibles desde los primeros meses, sin dolor,
-      con alineadores transparentes diseñados a medida para ti.
-    </p>
-    <div class="ld-hero-cta">
-      <a
-        href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita"
-        class="btn btn-p btn-lg"
-        target="_blank"
-        rel="noopener"
-      >
-        Reserva tu valoración gratuita
-      </a>
-      <div class="ld-badge">+2.000 pacientes tratados en Valencia</div>
+  <div class="ld-hero-in">
+
+    <!-- Columna izquierda: copy -->
+    <div class="ld-hero-copy fi">
+      <h1>
+        Corrige Tu Sonrisa<br>
+        <em>Sin Brackets,</em><br>
+        Sin Que Nadie Lo Note
+      </h1>
+      <p class="ld-hero-sub">
+        Resultados visibles desde los primeros meses, sin dolor,
+        con alineadores transparentes diseñados a medida para ti.
+      </p>
+      <div class="ld-hero-cta">
+        <a
+          href="https://wa.me/34697462206?text=Hola,%20me%20interesa%20Invisalign%20y%20quiero%20pedir%20una%20valoraci%C3%B3n%20gratuita"
+          class="btn btn-p btn-lg"
+          target="_blank"
+          rel="noopener"
+        >
+          Reserva tu valoración gratuita
+        </a>
+        <div class="ld-badge">+2.000 pacientes tratados en Valencia</div>
+      </div>
     </div>
+
+    <!-- Columna derecha: vídeo vertical -->
+    <div class="ld-hero-vid fi d2">
+      <div class="play-btn">
+        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+      </div>
+      <span>Próximamente: vídeo</span>
+    </div>
+
   </div>
 </section>
 
