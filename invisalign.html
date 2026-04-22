@@ -47,20 +47,20 @@ body { background: #fff; }
   padding: clamp(56px,8vh,100px) var(--pad);
 }
 .ld-hero-in {
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   align-items: center;
 }
 .ld-hero-copy { display: flex; flex-direction: column; gap: 0; }
 .ld-hero h1 {
   font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 300;
-  line-height: 1.06;
-  letter-spacing: -.028em;
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.02em;
   color: var(--ink);
   margin-bottom: 20px;
   font-optical-sizing: auto;
@@ -462,12 +462,10 @@ body { background: #fff; }
      LOGO BAR
 ════════════════════════════════════ -->
 <header class="ld-logobar">
-  <img
-    src="brand/logos/negro sin fondo.png"
-    alt="Clínica Dental Marítimo"
-    onerror="this.style.display='none';document.getElementById('ld-logotxt').style.display='block'"
-  >
-  <span id="ld-logotxt" style="display:none;font-family:var(--serif);font-size:19px;color:var(--ink);">Clínica Dental Marítimo</span>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="favicon.png" alt="" style="height:32px;width:32px;object-fit:contain;">
+    <span style="font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);letter-spacing:-.01em;">Clínica Dental Marítimo</span>
+  </div>
 
   <div class="ld-logobar-right">
     <a href="tel:+34697462206" class="ld-phone">
